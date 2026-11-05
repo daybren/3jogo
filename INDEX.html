@@ -347,8 +347,9 @@
 
             const currentQ = player.queue[0];
             const chosenOpt = currentQ.options[optIndex];
-            const optStr = `${chosenOpt[0]}, ${chosenOpt[1]}`;
-            const isCorrect = optStr === currentQ.correctStr;
+            
+            // Correção: Agora compara diretamente o texto da opção com a resposta certa
+            const isCorrect = chosenOpt === currentQ.correctStr;
 
             // Feedback Visual Rápido (Pisca Fundo)
             const container = document.getElementById(`p${playerNum}-container`);
